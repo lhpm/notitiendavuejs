@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link href="css/vuetify.min.css" rel="stylesheet">
+        <title>FACTURACION</title>
+    </head>
+    <body>
+        <div class="app" id="app">
+   <v-app id="inspire">
+    <div class="text-sm-center">
+ <v-card-title class="red lighten-1 white--text">
+            <span class="headline">Tienda XYZ</span>
+            <v-spacer></v-spacer>
+            <v-menu bottom left>
+              <v-btn slot="activator" icon dark>
+                <v-icon>more_vert</v-icon>
+              </v-btn>
+              <v-list>
+                <v-list-tile v-for="link in links">
+                  <v-btn 
+                  flat
+                  large
+                  :to = "link.url">{{ link.titulo }}</v-btn>
+                </v-list-tile>
+              </v-list>
+            </v-menu>
+</v-card-title>
+             <h1>TIENDA X Y Z muy pronto</h1>
+
+             <router-view></router-view>
+
+     <v-footer height="auto" class="grey darken-3">
+      <v-layout row wrap justify-center>
+        <v-btn
+          v-for="footer in footers"
+          :key="footer"
+          color="white"
+          flat
+          :to="footer.url"
+        >
+          {{ footer.titulo }}
+        </v-btn>
+        <v-flex xs12 py-3 text-xs-center white--text>
+          &copy;2018 — <strong>Tienda XYZ</strong>
+        </v-flex>
+      </v-layout>
+  </v-footer>
+    
+
+    </div>
+  </v-app>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/vue-resource.js"></script>
+  <script src="js/vuetify.js"></script>
+  <script src="js/vue-router.js"></script>
+  <script src="js/axios.min.js"></script>
+  <script src="js/componente.js"></script>
+    </body>
+</html>
